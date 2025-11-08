@@ -4,11 +4,7 @@ body {
 
 }
 
-html,
-body {
-  overflow-x: hidden;
-  /* empêche le défilement horizontal */
-}
+
 
 .entete marquee a {
   color: #fff;
@@ -530,3 +526,4 @@ footer {
     background-color: #e0e0e0;
   }
    };
+
