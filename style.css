@@ -107,7 +107,9 @@ footer {
   padding: 60px;
 }
 .div4 img{
-  height: 700px;
+  height: 500px;
+  text-align: center;
+  align-items:center;
 }
 
 .div5 {
@@ -496,6 +498,10 @@ footer {
 .div18 button:hover{
    background-color: red;
 }
+.div2 img{
+  width: 350px;
+}
+
 
 
 
