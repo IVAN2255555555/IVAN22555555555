@@ -1,12 +1,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+
+}
+
 html,
 body {
   overflow-x: hidden;
   /* empêche le défilement horizontal */
 }
-}
+
 .entete marquee a {
   color: #fff;
   text-decoration: none;
@@ -494,10 +497,19 @@ footer {
    background-color: red;
 }
 
+.produits {
+  margin: 40px 20px;
+}
 
+.produits h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
 
-/* === Mise en page horizontale pour toutes les sections de produits === */
-[class*="div"] {
+/* Conteneur défilant */
+.div8 {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -505,22 +517,21 @@ footer {
   padding: 20px;
 }
 
-/* Barre de défilement personnalisée */
-[class*="div"]::-webkit-scrollbar {
+.div8::-webkit-scrollbar {
   height: 8px;
 }
 
-[class*="div"]::-webkit-scrollbar-thumb {
+.div8::-webkit-scrollbar-thumb {
   background-color: #aaa;
   border-radius: 4px;
 }
 
-[class*="div"]::-webkit-scrollbar-thumb:hover {
+.div8::-webkit-scrollbar-thumb:hover {
   background-color: #777;
 }
 
-/* === Style pour chaque bloc d'image === */
-[class*="div"] > div {
+/* Chaque bloc de produit */
+.div9 {
   scroll-snap-align: start;
   flex: 0 0 auto;
   text-align: center;
@@ -530,8 +541,7 @@ footer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Images à l’intérieur de tes sections */
-[class*="div"] img {
+.div9 img {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -539,16 +549,17 @@ footer {
   transition: transform 0.3s;
 }
 
-[class*="div"] img:hover {
+.div9 img:hover {
   transform: scale(1.05);
 }
 
-/* Texte du prix (si présent) */
 .prix {
   font-weight: bold;
   color: #ff6600;
   margin-top: 10px;
 }
+
+
 
 
 
@@ -580,6 +591,3 @@ footer {
     background-color: #e0e0e0;
   }
    };
-
-
-
