@@ -497,67 +497,6 @@ footer {
    background-color: red;
 }
 
-.produits {
-  margin: 40px 20px;
-}
-
-.produits h2 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  text-align: center;
-  color: #333;
-}
-
-/* Conteneur défilant */
-.div8 {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 20px;
-}
-
-.div8::-webkit-scrollbar {
-  height: 8px;
-}
-
-.div8::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  border-radius: 4px;
-}
-
-.div8::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
-}
-
-/* Chaque bloc de produit */
-.div9 {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  text-align: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.div9 img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.div9 img:hover {
-  transform: scale(1.05);
-}
-
-.prix {
-  font-weight: bold;
-  color: #ff6600;
-  margin-top: 10px;
-}
 
 
 
