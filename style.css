@@ -1,7 +1,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-
+html,
+body {
+  overflow-x: hidden;
+  /* empêche le défilement horizontal */
+}
 }
 .entete marquee a {
   color: #fff;
