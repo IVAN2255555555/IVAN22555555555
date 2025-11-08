@@ -496,6 +496,59 @@ footer {
 
 
 
+/* === Mise en page horizontale pour toutes les sections de produits === */
+[class*="div"] {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Barre de défilement personnalisée */
+[class*="div"]::-webkit-scrollbar {
+  height: 8px;
+}
+
+[class*="div"]::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+[class*="div"]::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* === Style pour chaque bloc d'image === */
+[class*="div"] > div {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Images à l’intérieur de tes sections */
+[class*="div"] img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+[class*="div"] img:hover {
+  transform: scale(1.05);
+}
+
+/* Texte du prix (si présent) */
+.prix {
+  font-weight: bold;
+  color: #ff6600;
+  margin-top: 10px;
+}
 
 
 
@@ -527,5 +580,6 @@ footer {
     background-color: #e0e0e0;
   }
    };
+
 
 
