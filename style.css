@@ -10,6 +10,7 @@ body {
   /* empêche le défilement horizontal */
 }
 
+
 .entete marquee a {
   color: #fff;
   text-decoration: none;
@@ -34,12 +35,15 @@ marquee a {
   color: #ffcc00;
   font-weight: bold;
 }
+.site-logo p2{
+  color:aqua;
+}
 
 .main-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
+  background: coral;
   padding: 15px 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -76,11 +80,11 @@ i.bi {
 }
 
 #carouselExampleControlsNoTouching .carousel-item img {
-  width: 800px;
+  width: 500px;
   /* largeur fixe, ou utilisez max-width */
-  height: 1200px;
+  height: 600px;
   /* hauteur fixe */
-  object-fit: cover;
+  object-fit:;
   /* remplit le cadre sans déformer l'image */
   background-color: deeppink;
 }
@@ -501,17 +505,12 @@ footer {
 .div2 img{
   width: 350px;
 }
-
-
-
-
 @media (max-width: 1024px) {
   body {
     font-size: 16px;
     background-color: #f0f0f0;
   }
 }
-
 /* Téléphone (écrans plus petits que 768px) */
 @media (max-width: 768px) {
   body {
