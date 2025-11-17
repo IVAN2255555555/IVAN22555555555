@@ -1,0 +1,83 @@
+=<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petit QCM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Petit QCM</h2>
+
+<form id="qcmForm">
+  <!-- Question 1 -->
+  <div class="question">
+    <label>1. Quelle est la capitale de la France ?</label><br>
+    <input type="radio" name="q1" value="Paris"> Paris<br>
+    <input type="radio" name="q1" value="Londres"> Londres<br>
+    <input type="radio" name="q1" value="Berlin"> Berlin
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question">
+    <label>2. Combien y a-t-il de continents ?</label><br>
+    <input type="radio" name="q2" value="5"> 5<br>
+    <input type="radio" name="q2" value="6"> 6<br>
+    <input type="radio" name="q2" value="7"> 7
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question">
+    <label>3. Le JavaScript est un langage :</label><br>
+    <input type="radio" name="q3" value="Compilé"> Compilé<br>
+    <input type="radio" name="q3" value="Interprété"> Interprété<br>
+    <input type="radio" name="q3" value="Aucun"> Aucun des deux
+  </div>
+
+  <button type="button" onclick="calculerResultat()">Voir le résultat</button>
+
+  <div class="result">
+    <label for="resultat">Nombre de réponses correctes :</label>
+    <input type="text" id="resultat" readonly>
+  </div>
+</form>
+
+<script>
+  function calculerResultat() {
+    // Définir les bonnes réponses
+    const reponsesCorrectes = {
+      q1: "Paris",
+      q2: "7",x
+      q3: "Interprété"
+    };
+
+    let score = 0;
+
+    // Parcourir les questions et vérifier les réponses
+    for (let question in reponsesCorrectes) {
+      const reponseUtilisateur = document.querySelector(`input[name="${question}"]:checked`);
+      if (reponseUtilisateur && reponseUtilisateur.value === reponsesCorrectes[question]) {
+        score++;
+      }
+    }
+
+    // Afficher le résultat dans le champ texte
+    document.getElementById("resultat").value = score + " / " + Object.keys(reponsesCorrectes).length;
+  }
+</script>
+
+</body>
+</html>
